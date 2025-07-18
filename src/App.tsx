@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import './App.css'
 import { Navbar } from './components/navbar'
+import './App.css'
 
 function App() {
 
@@ -22,7 +22,7 @@ function App() {
       <Navbar />
       <div className='flex flex-col items-center justify-center h-screen'>
         <form onSubmit={(e) => convertir(e)} className='flex flex-col items-center justify-center gap-4'>
-          <input onChange={(e) => setPesos(parseFloat(e.target.value) || 0)} className="border w-2xs h-15 text-center rounded-2xl" type="number" name="" id="" placeholder='Ingrese la cantidad en pesos' value={pesos}/>
+          <input onChange={(e) => setPesos(parseFloat(e.target.value) || 0)} className="w-2xs h-16 text-center rounded-2xl border border-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-950 focus:border-blue-950" type="number" name="" id="" placeholder='Ingrese la cantidad en pesos' value={pesos}/>
           <div className='flex gap-4'>
             <button  className='bg-blue-950 text-white rounded-2xl h-14 w-40 hover:bg-blue-800 cursor-pointer' type='submit'>Convertir</button>
             <button onClick={(e) => limpiar(e)} className='bg-blue-950 text-white rounded-2xl h-14 w-40 hover:bg-blue-800 cursor-pointer' type='button' value={pesos}>Limpiar</button>
